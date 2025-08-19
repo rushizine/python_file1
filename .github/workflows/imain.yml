@@ -1,0 +1,20 @@
+name : Basic commands
+
+  on:
+    push:
+      branches:
+        - main
+        schedule:
+          -corn : "0-0 * * *"#Every day at midnight UTC
+          workflow distpatch: #Manual trigger
+
+          jobs:
+            demo-commands:
+            runs-on: ubuntu-latest
+
+            steps:
+              -name: show current working directory
+              run: pwd
+
+              -name: List files in the directory
+              run: Is-la
