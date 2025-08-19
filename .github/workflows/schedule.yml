@@ -1,10 +1,9 @@
-
 name : Basic commands
 
   on:
         schedule:
-          -corn : "0-0 */2 * * *" #Every day at midnight UTC
-          workflow distpatch: #Manual trigger
+          -corn : "*/2 * * *" #Every day at midnight UTC
+          workflow_distpatch: #Manual trigger
 
           jobs:
             demo-commands:
